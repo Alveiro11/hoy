@@ -1,0 +1,25 @@
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+public class llenado {
+	
+	WebDriver driver;
+	
+	public llenado(WebDriver driver){
+
+		this.driver = driver;
+
+	}
+
+	WebElement txtCore;
+
+	WebElement txtRuby;
+
+	WebElement Python;
+			
+			
+			
+			public void llenadocarrito(String q1, String q2, String q3)
+
+
+}
