@@ -73,6 +73,7 @@
 	</section>
 	<section name="Maven2ProjectWizardArchifactPage">
 		<list key="package">
+			<item value="Qvision.Empleo"/>
 			<item value="Qvision.registro"/>
 			<item value="page"/>
 			<item value="Qvision.POMCapacitacion"/>
@@ -81,6 +82,7 @@
 			<item value="Qvision"/>
 		</list>
 		<list key="artifactId">
+			<item value="Empleo"/>
 			<item value="registro"/>
 			<item value="PageFactory"/>
 			<item value="POMCapacitacion"/>
