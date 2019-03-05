@@ -1,0 +1,71 @@
+package busquedaempleopage;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+
+import com.paulhammant.ngwebdriver.ByAngularBinding.FindBy;
+
+import net.serenitybdd.core.pages.PageObject;
+import net.thucydides.core.annotations.DefaultUrl;
+
+	
+	@DefaultUrl("https://www.elempleo.com/co/homeusuario/")
+	public class SearchPage extends PageObject {
+		
+	    WebDriver driver;
+		
+		@FindBy(xpath = "//*[@id=\"text-13257620\"]")
+		WebElement txtEmail;
+		
+		@FindBy(xpath = "//*[@id=\"password-9810179\"]")
+		WebElement txtPassword;
+		
+		@FindBy(xpath = "/html/body/div[5]/div[2]/div/form/div/div/span[1]/input[2]")
+		WebElement txtCiudadSeleccionada;
+
+		@FindBy(xpath = "/html/body/div[5]/div[2]/div")
+		WebElement txtCargoPersona;
+				
+		@FindBy(xpath = "/html/body/div[4]/section[1]/div[3]/div[1]/div[2]/div/form/div/div/span[2]/div/div/div[2]")
+		WebElement seCiudad;
+		
+		@FindBy(xpath = "/html/body/div[4]/section[1]/div[3]/div[1]/div[2]/div/form/div/div/span[1]/div/div/div[1]")
+		WebElement seCargo;
+        
+		@FindBy(xpath = "/html/body/div[5]/div[2]/div/form/div/div/span[3]/button/i")
+		WebElement btnPrimary;
+		
+		@FindBy(id = "/html/body/div[8]/div[4]/div[2]/div[1]/div/div[1]/h4/label")
+		WebElement ValSalario;
+
+		@FindBy(xpath = "/html/body/div[8]/div[4]/div[2]/div[1]/div/div[3]/h4/label")
+		WebElement btnFechaPublicacion;
+
+		@FindBy(id = "WorkAreaFilter1")
+		WebElement btnArea;
+
+		
+		public void BuscarCargo(String CargoPersona, String CiudadSeleccionada) {
+			btnPrimary.click();
+			txtCargoPersona.sendKeys(CargoPersona);
+			seCargo.click();
+			txtCiudadSeleccionada.sendKeys(CiudadSeleccionada);
+			seCiudad.click();
+		}
+
+		public void seleccionar() {
+			ValSalario.click();
+			btnFechaPublicacion.click();
+			try {
+				Thread.sleep(5 * 4000);
+			} catch (Exception e) {
+				System.out.println(e);
+			}
+			btnArea.selectByVisibleText("Servicio al Cliente");
+			 driver.close();
+		}
+
+	}
+
+
+

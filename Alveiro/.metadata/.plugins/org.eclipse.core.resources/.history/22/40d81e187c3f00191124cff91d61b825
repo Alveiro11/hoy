@@ -1,0 +1,36 @@
+package busquedaempleoSteps;
+
+import java.io.IOException;
+
+import org.junit.Test;
+
+public class SearchPage {
+	
+	SearchPage pageSearch;
+
+	@Test
+	public void openPage() {
+		pageSearch.open();
+	}
+
+	private void open() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Test 
+	public void login(String Email, String password) {
+		pageSearch.predictivo("Ing", "Cal");
+	}
+	
+	private void predictivo(String string, String string2) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Test3
+	public void filtro() throws IOException {
+		pageSearch.filtro();
+	}
+
+}

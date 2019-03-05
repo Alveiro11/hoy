@@ -1,0 +1,16 @@
+[core]
+	repositoryformatversion = 0
+	filemode = false
+	bare = false
+	logallrefupdates = true
+	symlinks = false
+	ignorecase = true
+[remote "TareasRealizadas"]
+	url = https://github.com/Alveiro11/TareasRealizadas.git
+	fetch = +refs/heads/*:refs/remotes/TareasRealizadas/*
+[remote "origin"]
+	url = https://github.com/Alveiro11/TareasRealizadas.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[remote "busquedaempleoalveiro"]
+	url = https://github.com/Alveiro11/TareasRealizadas.git
+	fetch = +refs/heads/*:refs/remotes/busquedaempleoalveiro/*

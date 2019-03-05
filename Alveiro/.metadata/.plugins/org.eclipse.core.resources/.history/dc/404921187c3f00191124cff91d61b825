@@ -1,0 +1,38 @@
+package busquedaempleoStepDefinitions;
+
+import java.io.IOException;
+import java.util.List;
+import java.util.Map;
+
+import cucumber.api.DataTable;
+import cucumber.api.java.en.Given;
+import cucumber.api.java.en.Then;
+import net.thucydides.core.annotations.Steps;
+
+public class SearchStepDefinitions {
+	
+	@Steps
+	SearchStep stepSearch;
+	
+
+	@Given("^I want search a offert$")
+	public void iWantSearchAOffert(DataTable arg1) {
+		stepSearch.openUrl();
+		List<Map<String, String>> listData = arg1.asMaps(String.class, String.class);
+		String username = listData.get(0).get("cargo");
+		String password = listData.get(1).get("ciudad");
+		stepSearch.login(email, password);
+	}
+
+	@Given("^I am going to filter the data$")
+	public void iAmGoingToFilterTheData() throws IOException {
+		stepSearch.filter();
+	}
+
+	@Then("^I make the validator of offerts$")
+	public void iMakeTheValidatorOfOfferts() {
+
+	}
+
+
+}
